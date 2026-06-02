@@ -1,0 +1,17 @@
+---
+import { AppConfig } from "../../data";
+import { AppRoutes } from "../../data/routes.config";
+---
+
+<nav>
+    <div class="brand">
+        <a href="">{ AppConfig.brand_name }</a>
+    </div>
+
+    <div class="links">
+        <a href="">Strategy</a>
+        <a href="">Identity</a>
+        <a href={ AppRoutes.brand_guidelines }>Guidelines</a>
+        <a href="">Presentation</a>
+    </div>
+</nav>

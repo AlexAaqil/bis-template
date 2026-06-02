@@ -1,0 +1,17 @@
+nav {
+    @apply flex justify-between items-center;
+
+    .brand {
+        a {
+            @apply font-semibold;
+        }
+    }
+
+    .links {
+        @apply flex gap-8;
+
+        a {
+            @apply text-muted-foreground hover:text-accent;
+        }
+    }
+}
