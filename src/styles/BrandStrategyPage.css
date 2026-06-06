@@ -1,0 +1,38 @@
+.BrandStrategyPage {
+    .Slide {
+        .container-fluid {
+            @apply min-h-screen p-16 border border-border;
+
+            .header {
+                .title {
+                    @apply text-s-subheading mb-8;
+                }
+            }
+        }
+    }
+    
+
+    .MainSlide {
+        .container-fluid {
+            @apply flex flex-col gap-8 bg-accent text-accent-foreground;
+
+            .header {
+                .title {
+                    @apply text-s-heading font-bold mb-8;
+                    line-height: 1;
+                }
+                .description {
+                    @apply text-s-subheading;
+                }
+            }
+
+            .footer {
+                @apply mt-auto flex gap-24;
+
+                .contact {
+                    @apply text-s-caption;
+                }
+            }
+        }
+    }
+}

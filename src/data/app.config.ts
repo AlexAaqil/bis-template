@@ -1,3 +1,3 @@
 export const AppConfig = {
-  brand_name: 'ExampleBrand',
+  brand_name: 'Alkiwa',
 } as const;

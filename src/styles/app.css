@@ -9,12 +9,22 @@
         'Noto Color Emoji';
     --font-accent: 'DM Serif Display',serif;
 
+
+
+    --text-s-heading: var(--s-heading);
+    --text-s-subheading: var(--s-subheading);
+    --text-s-body: var(--s-body);
+    --text-s-caption: var(--s-caption);
+
+
+
     --color-background: var(--background);
 
     --color-foreground: var(--foreground);
     --color-muted-foreground: var(--muted-foreground);
 
     --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
 
     --color-border: var(--border);
 }
@@ -32,13 +42,19 @@
 :root {
     --font-accent: Georgia, 'DM Serif Display', serif;
 
+    /* Font sizes */
+    --s-heading: 96px;
+    --s-subheading: 48px;
+    --s-body: 16px;
+    --s-caption: 12px;
+
     --background: #FAF9F5;
 
     --foreground: #171918;
     --muted-foreground: #4e5350;
 
     --accent: #5200FF;
-
+    --accent-foreground: #FAF9F5;
     --border: hsl(0 0% 92.8%);
 }
 
@@ -49,7 +65,7 @@
     --muted-foreground: hsl(0 0% 63.9%);
 
     --accent: #5200FF;
-
+    --accent-foreground: #FAF9F5;
     --border: hsl(0 0% 14.9%);
 }
 
@@ -87,3 +103,4 @@ body {
 @import './Navbar';
 
 @import './Homepage';
+@import './BrandStrategyPage';

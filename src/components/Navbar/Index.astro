@@ -5,13 +5,51 @@ import { AppRoutes } from "../../data/routes.config";
 
 <nav>
     <div class="brand">
-        <a href="">{ AppConfig.brand_name }</a>
+        <a href={ AppRoutes.home }>{ AppConfig.brand_name }</a>
     </div>
 
     <div class="links">
-        <a href="">Strategy</a>
+        <a href={ AppRoutes.brand_strategy }>Strategy</a>
         <a href="">Identity</a>
         <a href={ AppRoutes.brand_guidelines }>Guidelines</a>
         <a href="">Presentation</a>
     </div>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="light-icon">☀️</span>
+        <span class="dark-icon">🌙</span>
+    </button>
 </nav>
+
+<script>
+  function initTheme() {
+    // Get theme from localStorage or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  function toggleTheme() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  // Initialize theme immediately to avoid flash
+  initTheme();
+
+  // Set up toggle button
+  const toggleButton = document.getElementById('theme-toggle');
+  if (toggleButton) {
+    toggleButton.addEventListener('click', toggleTheme);
+  }
+</script>
